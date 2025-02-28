@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "aos": "^2.3.4",
+    "gsap": "^3.12.7"
+  }
+}

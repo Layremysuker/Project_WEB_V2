@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+        <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Add New Product</h2>
+          <form class="space-y-6">
+            
+            <!-- Product Number -->
+            <div class="mb-4">
+              <label for="product_no" class="block text-gray-700 text-sm font-medium mb-2">Product Number</label>
+              <input type="text" id="product_no" placeholder="Enter Product Number" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+      
+            <!-- Product Name -->
+            <div class="mb-4">
+              <label for="product_name" class="block text-gray-700 text-sm font-medium mb-2">Product Name</label>
+              <input type="text" id="product_name" placeholder="Enter Product Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+      
+            <!-- Flavor -->
+            <div class="mb-4">
+              <label for="flavor" class="block text-gray-700 text-sm font-medium mb-2">Flavor</label>
+              <input type="text" id="flavor" placeholder="Enter Flavor" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+      
+            <!-- Description -->
+            <div class="mb-4">
+              <label for="description" class="block text-gray-700 text-sm font-medium mb-2">Description</label>
+              <textarea id="description" placeholder="Enter Description" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" rows="4"></textarea>
+            </div>
+      
+            <!-- Product Price -->
+            <div class="mb-4">
+              <label for="product_price" class="block text-gray-700 text-sm font-medium mb-2">Product Price</label>
+              <input type="number" id="product_price" placeholder="Enter Price" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+      
+            <!-- Product Caffeine -->
+            <div class="mb-4">
+              <label for="product_caffeine" class="block text-gray-700 text-sm font-medium mb-2">Caffeine Content</label>
+              <input type="text" id="product_caffeine" placeholder="Enter Caffeine Content" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+      
+            <!-- Sugar-Free -->
+            <div class="mb-4">
+              <label for="sugar_free" class="block text-gray-700 text-sm font-medium mb-2">Sugar-Free</label>
+              <select id="sugar_free" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+      
+            <!-- Product Image -->
+            <div class="mb-4">
+              <label for="img" class="block text-gray-700 text-sm font-medium mb-2">Product Image</label>
+              <input type="file" id="img" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+      
+            <!-- Submit Button -->
+            <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500">
+              Add Product
+            </button>
+          </form>
+        </div>
+      </div>
+      
+</body>
+</html>

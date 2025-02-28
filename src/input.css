@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* การกำหนดให้ scroll-smooth ทำงาน */
+html {
+    scroll-behavior: smooth;
+  }
+  
