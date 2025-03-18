@@ -6,6 +6,7 @@
   <link href="./output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body class="bg-orange-400 p-6 ">
 
 <!-- HEAD -->
@@ -22,9 +23,10 @@
   <div class="border-t border-gray-300 pt-4">
     <ul class="space-y-3">
       <li class="flex items-center gap-3 p-3 bg-gray-100 rounded-lg shadow-sm">
-        <span class="w-10 h-10 flex items-center justify-center bg-blue-500 text-white text-xl font-bold rounded-full">
+        <a href="add_product.html" class="w-10 h-10 flex items-center justify-center bg-blue-500 text-white text-xl font-bold rounded-full cursor-pointer">
           +
-        </span>
+        </a>
+        
         <div>
           <p class="text-gray-900 font-medium">Add New Product</p>
           <p class="text-sm text-gray-600">Insert new product details into the system.</p>
@@ -55,54 +57,32 @@
       <br>
 
     <!-- TABLE -->
-
     <section class="w-full bg-white p-6 rounded-lg shadow-md">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-bold text-blue-gray-900">Product List</h2>
-        </div>
-
-        <div class="h-full w-full overflow-x-auto border border-gray-300 rounded-lg">
-            <table class="w-full min-w-max table-auto text-left">
-                <thead class="bg-gray-100">
-                    <tr>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">#</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Product Name</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Flavor</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Description</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Price ($)</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Caffeine (mg)</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Sugar-Free</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Image</th>
-                        <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold text-center">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="productTable">
-                    <!-- Sample Data -->
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-4 py-3">1</td>
-                        <td class="px-4 py-3">Energy Drink X</td>
-                        <td class="px-4 py-3">Berry</td>
-                        <td class="px-4 py-3">Boosts energy with natural ingredients</td>
-                        <td class="px-4 py-3">$3.99</td>
-                        <td class="px-4 py-3">80mg</td>
-                        <td class="px-4 py-3">No</td>
-                        <td class="px-4 py-3"><img src="img/Original.png" alt="Product Image" class="rounded w-10 h-10"></td>
-                        <td class="px-4 py-3 flex justify-center gap-3 ">
-                            <!-- Edit Icon -->
-                            <svg onclick="editProduct()" class="w-6 h-6 text-blue-500 cursor-pointer hover:text-blue-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                            </svg>
-
-                            <!-- Delete Icon -->
-                            <svg onclick="deleteProduct()" class="w-6 h-6 text-red-500 cursor-pointer hover:text-red-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-                            </svg>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+      <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold text-blue-gray-900">Product List</h2>
+      </div>
+  
+      <div class="h-full w-full overflow-x-auto border border-gray-300 rounded-lg">
+          <table class="w-full min-w-max table-auto text-left">
+              <thead class="bg-gray-100">
+                  <tr>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">#</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Product Name</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Flavor</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Description</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Price ($)</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Caffeine (mg)</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Sugar-Free</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold">Image</th>
+                      <th class="border-b border-gray-300 px-4 py-3 text-sm font-bold text-center">Actions</th>
+                  </tr>
+              </thead>
+              <tbody id="productTable">
+                  <!-- Data will be inserted here -->
+              </tbody>
+          </table>
+      </div>
+  </section>
 
     <script>
         function editProduct() {
@@ -114,8 +94,175 @@
         }
     </script>
 
+    <!-- อัพเดต -->
+    <div id="editModal" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+      <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+          <h2 class="text-2xl font-semibold text-center text-blue-600 mb-4">Edit Product</h2>
+  
+          <form id="editProductForm">
+              <input type="hidden" id="editProductId" name="product_no">
+  
+              <label class="block font-medium">Product Name</label>
+              <input type="text" id="editProductName" name="name" class="w-full border rounded p-2 mb-2">
+  
+              <label class="block font-medium">Flavor</label>
+              <input type="text" id="editFlavor" name="flavor" class="w-full border rounded p-2 mb-2">
+  
+              <label class="block font-medium">Description</label>
+              <textarea id="editDescription" name="desc" class="w-full border rounded p-2 mb-2"></textarea>
+  
+              <label class="block font-medium">Price</label>
+              <input type="number" id="editPrice" name="price" step="0.01" class="w-full border rounded p-2 mb-2">
+  
+              <label class="block font-medium">Caffeine</label>
+              <input type="number" id="editCaffeine" name="caffeine" class="w-full border rounded p-2 mb-2">
+  
+              <label class="block font-medium">Sugar-Free</label>
+              <select id="editSugarFree" name="sugar_free" class="w-full border rounded p-2 mb-2">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+              </select>
+  
+              <label class="block font-medium">Product Image</label>
+              <input type="file" id="editImage" name="image" class="w-full border rounded p-2 mb-2">
+              <img id="editPreviewImage" class="w-full h-40 object-cover rounded mb-2" src="">
+  
+              <div class="flex justify-between">
+                  <button type="button" onclick="closeEditModal()" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">
+                      Cancel
+                  </button>
+                  <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                      Update
+                  </button>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  <script src="admin.js"></script>
+
 
 
     
 </body>
 </html>
+
+<script>
+async function fetchProducts() {
+    try {
+        const response = await fetch("http://localhost/Project_Web_V2/src/php/read.php");
+        if (!response.ok) {
+            throw new Error("Failed to fetch data");
+        }
+        const products = await response.json();
+
+        const productTable = document.getElementById("productTable");
+        productTable.innerHTML = ""; // ล้างข้อมูลเก่าออก
+
+        products.forEach((product, index) => {
+            const imagePath = `http://localhost/Project_Web_V2/src/img/${product.image_name}`;
+            const sugarFreeText = product.sugar_free ? "Yes" : "No";
+
+            const row = `
+                <tr class="hover:bg-gray-50">
+                    <td class="px-4 py-3">${index + 1}</td>
+                    <td class="px-4 py-3">${product.name}</td>
+                    <td class="px-4 py-3">${product.flavor}</td>
+                    <td class="px-4 py-3">${product.desc}</td>
+                    <td class="px-4 py-3">$${product.price.toFixed(2)}</td>
+                    <td class="px-4 py-3">${product.caffeine}mg</td>
+                    <td class="px-4 py-3">${sugarFreeText}</td>
+                    <td class="px-4 py-3"><img src="${imagePath}" alt="Product Image" class="rounded w-10 h-10"></td>
+                    <td class="px-4 py-3 flex justify-center gap-3">
+                        <svg onclick="editProduct(${product.id})" class="w-6 h-6 text-blue-500 cursor-pointer hover:text-blue-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                        </svg>
+                        <svg onclick="deleteProduct(${product.id})" class="w-6 h-6 text-red-500 cursor-pointer hover:text-red-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                        </svg>
+                    </td>
+                </tr>
+            `;
+            productTable.innerHTML += row;
+        });
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+}
+
+// เรียกฟังก์ชัน fetchProducts เมื่อโหลดหน้าเว็บ
+document.addEventListener("DOMContentLoaded", fetchProducts);
+
+fetch("add_product.php", {
+    method: "POST",
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    if (data.success) {
+        alert(data.success); // แจ้งเตือนว่าบันทึกสำเร็จ
+        window.location.href = "admin.html"; // กลับไปที่ admin.html
+    } else {
+        alert(data.error); // แจ้งเตือนถ้ามีข้อผิดพลาด
+    }
+});
+
+async function deleteProduct(productId) {
+    console.log("กำลังลบสินค้า ID:", productId); // ตรวจสอบค่าที่ส่ง
+    if (!confirm("คุณแน่ใจหรือไม่ว่าต้องการลบสินค้านี้?")) {
+        return;
+    }
+
+    try {
+        const response = await fetch("http://localhost/Project_Web_V2/src/php/delete_product.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id: productId }), // ส่งค่า productId
+        });
+
+        const result = await response.json();
+        console.log("Response:", result); // ตรวจสอบค่าที่ตอบกลับจาก PHP
+
+        if (result.success) {
+            alert("✅ ลบสินค้าเรียบร้อย!");
+            fetchProducts(); // โหลดรายการใหม่
+        } else {
+            alert("❌ เกิดข้อผิดพลาด: " + result.error);
+        }
+    } catch (error) {
+        console.error("เกิดข้อผิดพลาด:", error);
+        alert("❌ ไม่สามารถลบสินค้าได้");
+    }
+}
+
+function editProduct(productNo) {
+    fetch(`get_product.php?Product_No=${productNo}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                // ใส่ค่าลงในฟอร์ม
+                document.querySelector("input[name='name']").value = data.product.Product_Name;
+                document.querySelector("input[name='flavor']").value = data.product.Flavor;
+                document.querySelector("textarea[name='desc']").value = data.product.Description;
+                document.querySelector("input[name='price']").value = data.product.Product_Price;
+                document.querySelector("input[name='caffeine']").value = data.product.Product_Caffeine;
+                document.querySelector("select[name='sugar_free']").value = data.product.Sugar_Free;
+                document.querySelector("input[name='product_no']").value = productNo;
+
+                // แสดงฟอร์มแก้ไข
+                document.querySelector("#editModal").classList.remove("hidden");
+            }
+        })
+        .catch(error => console.error("❌ Error:", error));
+}
+
+}
+
+
+
+
+</script>

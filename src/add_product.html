@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-50 to-blue-100 min-h-screen flex items-center justify-center">
+
+    <div class="max-w-lg w-full bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold text-center text-blue-600 mb-6">Edit Product</h2>
+
+        <form action="http://localhost/Project_Web_V2/src/php/add_product.php" method="POST" enctype="multipart/form-data" class="space-y-4">
+            
+            <input type="hidden" name="product_no" value="1">
+            
+            <div>
+                <label class="block text-gray-700 font-medium">Product Name</label>
+                <input type="text" name="name" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Flavor</label>
+                <input type="text" name="flavor" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Description</label>
+                <textarea name="desc" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" required></textarea>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Price ($)</label>
+                <input type="number" name="price" step="0.01" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Caffeine (mg)</label>
+                <input type="number" name="caffeine" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200" required>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Sugar-Free</label>
+                <select name="sugar_free" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-medium">Product Image</label>
+                <input type="file" name="image" accept="image/*" class="w-full border-gray-300 rounded-lg p-2 focus:ring focus:ring-blue-200">
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">Update Product</button>
+        </form>
+    </div>
+
+</body>
+</html>
